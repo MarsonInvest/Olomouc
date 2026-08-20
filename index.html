@@ -2,46 +2,49 @@
 <html lang="cs">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
     <meta
       name="description"
       content="Prodej bytů a samostatného půdního investičního celku v secesním domě na třídě Spojenců v Olomouci."
     />
-    <meta name="theme-color" content="#0e2c24" />
-    <title>Rezidence Spojenců 705 · Olomouc</title>
-    <link rel="preload" as="image" href="assets/100554609.webp" />
-    <link rel="stylesheet" href="styles.css" />
+    <meta name="theme-color" content="#11342b" />
+    <title>Rezidence Spojenců 705 | Olomouc</title>
+    <link rel="preload" as="image" href="assets/100554609.webp" fetchpriority="high" />
+    <link rel="preload" as="font" href="assets/fonts/geist-500.ttf" type="font/ttf" crossorigin />
+    <link rel="preload" as="font" href="assets/fonts/geist-600.ttf" type="font/ttf" crossorigin />
+    <link rel="stylesheet" href="styles.css?v=20260820-23" />
   </head>
   <body>
-    <a class="skip-link" href="#nabidka">Přeskočit na nabídku</a>
+    <a class="skip-link" href="#nabidka">Přeskočit na výběr bytů</a>
 
     <header class="site-header" id="top">
-      <div class="header-inner">
-        <a class="brand" href="#top" aria-label="Marson Invest — Rezidence Spojenců 705">
-          <img src="assets/marson-invest-mark.png" width="29" height="36" alt="" />
-          <span class="brand-wordmark"><strong>MARSON</strong><span>INVEST</span></span>
+      <div class="header-shell">
+        <a class="brand" href="#top" aria-label="Marson Invest, Rezidence Spojenců 705">
+          <img class="brand-mark" src="assets/marson-invest-mark.png" width="25" height="31" alt="" />
         </a>
 
         <nav class="desktop-nav" aria-label="Hlavní navigace">
           <a href="#projekt">Dům</a>
-          <a href="#nabidka">Nabídka</a>
+          <a href="#nabidka">Jednotky</a>
           <a href="#puda">Půdní celek</a>
           <a href="#galerie">Galerie</a>
           <a href="#lokalita">Lokalita</a>
         </nav>
 
-        <a class="header-phone" href="tel:+420775448890">+420 775 448 890</a>
+        <a class="header-contact" href="tel:+420775448890">+420 775 448 890</a>
 
         <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu">
           <span class="sr-only">Otevřít navigaci</span>
-          <span aria-hidden="true"></span>
-          <span aria-hidden="true"></span>
+          <span class="menu-icon" aria-hidden="true">
+            <span class="menu-line"></span>
+            <span class="menu-line"></span>
+          </span>
         </button>
       </div>
 
       <nav class="mobile-nav" id="mobile-menu" aria-label="Mobilní navigace" hidden>
         <a href="#projekt">Dům</a>
-        <a href="#nabidka">Nabídka</a>
+        <a href="#nabidka">Jednotky</a>
         <a href="#puda">Půdní celek</a>
         <a href="#galerie">Galerie</a>
         <a href="#lokalita">Lokalita</a>
@@ -51,188 +54,238 @@
 
     <main>
       <section class="hero" aria-labelledby="hero-heading">
-        <img
-          class="hero-image"
-          src="assets/100554609.webp"
-          alt="Letecký pohled na historický dům Rezidence Spojenců 705 v Olomouci"
-        />
-        <div class="hero-shade"></div>
-        <div class="hero-content page-width">
-          <p class="eyebrow">TŘ. SPOJENCŮ 705/4 · OLOMOUC</p>
-          <h1 id="hero-heading">Byty s charakterem.<br />Pár kroků od centra.</h1>
-          <p class="hero-intro">
-            Prodej 10 bytů v pozdně secesním domě z roku 1912 a samostatného půdního investičního celku.
-          </p>
-          <div class="hero-actions">
-            <a class="button button-gold" href="#nabidka">Vybrat byt</a>
-            <a class="button button-ghost" href="tel:+420775448890">Domluvit prohlídku</a>
+        <figure class="hero-media" aria-hidden="true">
+          <img class="hero-image hero-image--a" src="assets/100554609.webp" alt="" fetchpriority="high" decoding="async" />
+          <img class="hero-image hero-image--b" src="assets/100555486.webp" alt="" loading="eager" decoding="async" />
+          <img class="hero-image hero-image--c" src="assets/100555300.webp" alt="" loading="eager" decoding="async" />
+        </figure>
+        <div class="hero-wash" aria-hidden="true"></div>
+        <div class="hero-copy page-shell">
+          <div class="hero-identity">
+            <p class="hero-address">Tř. Spojenců 705/4, Olomouc</p>
+            <h1 id="hero-heading">Byty s <span class="hero-word-wrap" aria-hidden="true"><span class="hero-word" id="hero-word">charakterem.</span></span><span class="sr-only"> charakterem.</span></h1>
+            <p class="hero-intro">Deset bytů a samostatný půdní celek v secesním domě z roku 1912, pár kroků od centra.</p>
+            <div class="hero-actions hero-actions--primary">
+              <a class="button button-primary" href="#nabidka">Vybrat byt <span aria-hidden="true">→</span></a>
+            </div>
           </div>
-        </div>
-        <div class="hero-strip" aria-label="Základní parametry domu">
-          <div><span>1912</span><small>rok návrhu domu</small></div>
-          <div><span>10 bytů</span><small>k samostatnému prodeji</small></div>
-          <div><span>237,73 m²</span><small>půdní investiční celek</small></div>
         </div>
       </section>
 
-      <section class="project-section page-width" id="projekt" aria-labelledby="project-heading">
-        <div class="section-heading">
-          <p class="eyebrow eyebrow-dark">REZIDENCE SPOJENCŮ 705</p>
-          <h2 id="project-heading">Dům, který patří k Olomouci.</h2>
-        </div>
-        <div class="project-copy">
+      <section class="story" id="projekt" aria-labelledby="project-heading">
+        <div class="page-shell story-intro">
+          <p class="section-kicker">Rezidence Spojenců 705</p>
+          <h2 id="project-heading">Dům se silnou adresou i vlastní atmosférou.</h2>
           <p>
-            Pozdně secesní činžovní dům stojí v klidné ulici u Čechových sadů a historického centra. Návrh z roku 1912 pochází od olomouckého architekta a stavitele Heinricha Czeschnera.
-          </p>
-          <p>
-            Zachovalé proporce domu, vysoké stropy, špaletová okna, dřevěné podlahy a soukromá předzahrádka dávají jednotlivým bytům osobitý základ pro vlastní bydlení.
+            Pozdně secesní činžovní dům navrhl v roce 1912 olomoucký architekt a stavitel Heinrich Czeschner. Stojí v klidné ulici na zeleném okruhu kolem historického centra.
           </p>
         </div>
-        <dl class="project-facts">
-          <div><dt>1 606,41 m²</dt><dd>celková hrubá podlahová plocha</dd></div>
-          <div><dt>5 + 1</dt><dd>nadzemních a podzemní podlaží</dd></div>
-          <div><dt>Čechovy sady</dt><dd>bezprostředně za domem</dd></div>
-          <div><dt>bez výtahu</dt><dd>autentický městský dům</dd></div>
-        </dl>
+
+        <div class="story-stack page-shell" data-story-stack>
+          <article class="story-card story-card--facade">
+            <div class="story-card-media"><img src="assets/100555486.webp" alt="Pohled na secesní fasádu domu v třídě Spojenců" loading="lazy" /></div>
+            <div class="story-card-copy">
+              <h3>Vznikl jako promyšlený městský dům.</h3>
+              <p>Součást urbanisticky cenného trojbloku vlastních nájemních a obytných domů.</p>
+            </div>
+          </article>
+          <article class="story-card story-card--hall">
+            <div class="story-card-media"><img src="assets/100554631.webp" alt="Vstupní hala se secesní dlažbou a poštovními schránkami" loading="lazy" /></div>
+            <div class="story-card-copy">
+              <h3>Proporce, které dávají bytům prostor.</h3>
+              <p>Vysoké stropy, špaletová okna, dřevěné podlahy a zachované společné prostory tvoří základ, který se nedá dostavět.</p>
+            </div>
+          </article>
+          <article class="story-card story-card--park">
+            <div class="story-card-media"><img src="assets/100555300.webp" alt="Nárožní pohled na rezidenční dům se zelení před domem" loading="lazy" /></div>
+            <div class="story-card-copy">
+              <h3>Park za domem, centrum pěšky.</h3>
+              <p>Čechovy sady začínají hned za domem. Horní a Dolní náměstí i tramvaj v Palackého ulici jsou v přirozeném pěším dosahu.</p>
+            </div>
+          </article>
+        </div>
       </section>
 
-      <section class="offer-section" id="nabidka" aria-labelledby="offer-heading">
-        <div class="page-width">
-          <div class="offer-heading-row">
-            <div class="section-heading">
-              <p class="eyebrow eyebrow-dark">AKTUÁLNÍ NABÍDKA</p>
-              <h2 id="offer-heading">Vyberte si svůj byt.</h2>
+      <section class="offer" id="nabidka" aria-labelledby="offer-heading">
+        <div class="page-shell">
+          <header class="offer-intro">
+            <p class="section-kicker">Aktuální nabídka</p>
+            <h2 id="offer-heading">Vyberte si byt podle podlaží, výměry a ceny.</h2>
+            <p>Všechny byty se prodávají ve stávajícím stavu. Kliknutím na řádek zobrazíte konkrétní jednotku.</p>
+          </header>
+
+          <div class="offer-controls">
+            <div class="filter-group" role="group" aria-label="Filtrovat byty podle podlaží">
+              <button class="filter is-active" type="button" data-filter="all" aria-pressed="true">Vše</button>
+              <button class="filter" type="button" data-filter="1. NP" aria-pressed="false">1. NP</button>
+              <button class="filter" type="button" data-filter="2. NP" aria-pressed="false">2. NP</button>
+              <button class="filter" type="button" data-filter="3. NP" aria-pressed="false">3. NP</button>
+              <button class="filter" type="button" data-filter="4. NP" aria-pressed="false">4. NP</button>
             </div>
-            <p class="offer-lede">
-              Každý byt se prodává ve stávajícím stavu. Uvedená cena je nabídková cena konkrétní jednotky.
-            </p>
+            <button class="sort-button" type="button" data-sort="price" aria-pressed="false">Řadit podle ceny</button>
           </div>
 
-          <div class="filters" aria-label="Filtrovat nabídku podle podlaží">
-            <button class="filter is-active" type="button" data-filter="all">Vše</button>
-            <button class="filter" type="button" data-filter="1. NP">1. NP</button>
-            <button class="filter" type="button" data-filter="2. NP">2. NP</button>
-            <button class="filter" type="button" data-filter="3. NP">3. NP</button>
-            <button class="filter" type="button" data-filter="4. NP">4. NP</button>
-          </div>
+          <p class="offer-result" id="offer-result" aria-live="polite">10 bytů v nabídce</p>
 
-          <div class="unit-grid" id="unit-grid" aria-live="polite"></div>
-
-          <div class="price-table-wrap">
-            <div class="price-table-heading">
-              <div>
-                <p class="eyebrow eyebrow-dark">PŘEHLED CEN</p>
-                <h3>Byty v prodeji</h3>
-              </div>
-              <p>Nabídková cena celkem <strong id="residential-total">85 800 000 Kč</strong></p>
-            </div>
-            <div class="table-scroll">
-              <table>
+          <div class="offer-layout">
+            <div class="unit-table-wrap">
+              <table class="unit-table" aria-label="Byty v prodeji">
                 <thead>
-                  <tr><th>Byt</th><th>Podlaží</th><th>Výměra</th><th>Cena</th><th></th></tr>
+                  <tr>
+                    <th scope="col">Jednotka</th>
+                    <th scope="col">Podlaží</th>
+                    <th scope="col">Výměra</th>
+                    <th scope="col">Cena</th>
+                    <th scope="col"><span class="sr-only">Akce</span></th>
+                  </tr>
                 </thead>
-                <tbody id="price-table-body"></tbody>
+                <tbody id="unit-table-body"></tbody>
               </table>
+              <div class="offer-empty" id="offer-empty" hidden>
+                <strong>V tomto výběru nyní není žádný byt.</strong>
+                <button type="button" data-filter="all">Zobrazit všechny byty</button>
+              </div>
             </div>
+
+            <aside class="unit-preview" aria-live="polite">
+              <figure class="preview-media">
+                <img id="preview-image" src="assets/100554635.webp" alt="Obytný prostor s vysokými okny a parketovou podlahou" />
+              </figure>
+              <div class="preview-content">
+                <p class="preview-floor" id="preview-floor">1. NP</p>
+                <h3 id="preview-name">Byt 01</h3>
+                <dl class="preview-facts">
+                  <div><dt>Výměra</dt><dd id="preview-area">157,19 m²</dd></div>
+                  <div><dt>Cena</dt><dd id="preview-price">11 290 000 Kč</dd></div>
+                </dl>
+                <p id="preview-description">Byt o výměře 157,19 m² v prvním nadzemním podlaží. Prodává se ve stávajícím stavu.</p>
+                <button class="button button-primary" type="button" data-open-selected>Detail jednotky <span aria-hidden="true">→</span></button>
+                <p class="preview-note">Fotografie ukazují dům a jeho interiéry.</p>
+              </div>
+            </aside>
+          </div>
+
+          <div class="offer-total">
+            <span>Celkem 10 bytů</span>
+            <strong id="residential-total">85 800 000 Kč</strong>
           </div>
         </div>
       </section>
 
-      <section class="attic-section" id="puda" aria-labelledby="attic-heading">
-        <div class="attic-image-wrap">
-          <img src="assets/100554650.webp" alt="Původní dřevěný krov v půdním prostoru domu" loading="lazy" />
-        </div>
-        <div class="attic-copy">
-          <p class="eyebrow">SAMOSTATNÝ PRODEJ</p>
-          <h2 id="attic-heading">Půdní investiční celek</h2>
-          <p>
-            Samostatně přístupný celek zahrnuje půdní prostor, prádelnu a navazující chodbu v celkové výměře 237,73 m². Nabízí vlastnímu kupujícímu prostor pro budoucí záměr.
-          </p>
-          <dl class="attic-facts">
-            <div><dt>237,73 m²</dt><dd>celková výměra</dd></div>
-            <div><dt>10 490 000 Kč</dt><dd>nabídková cena</dd></div>
-          </dl>
-          <button class="text-link" type="button" data-open-unit="P">Zobrazit detail celku <span aria-hidden="true">↗</span></button>
-        </div>
-      </section>
-
-      <section class="gallery-section page-width" id="galerie" aria-labelledby="gallery-heading">
-        <div class="gallery-heading">
-          <div class="section-heading">
-            <p class="eyebrow eyebrow-dark">FOTOGRAFIE</p>
-            <h2 id="gallery-heading">Detail domu a atmosféra interiérů.</h2>
+      <section class="attic" id="puda" aria-labelledby="attic-heading">
+        <div class="page-shell attic-grid">
+          <div class="attic-copy">
+            <p class="section-kicker">Samostatný prodej</p>
+            <h2 id="attic-heading">Půdní investiční celek.</h2>
+            <p>
+              Celek zahrnuje půdní prostor, prádelnu a navazující chodbu v celkové výměře 237,73 m². Prodává se samostatně pro vlastní budoucí záměr.
+            </p>
+            <dl class="attic-facts">
+              <div><dt>Výměra</dt><dd>237,73 m²</dd></div>
+              <div><dt>Nabídková cena</dt><dd>10 490 000 Kč</dd></div>
+            </dl>
+            <button class="text-button" type="button" data-open-unit="P">Zobrazit detail celku <span aria-hidden="true">→</span></button>
           </div>
-          <p>Secesní fasáda, schodiště, parkety, vysoká okna i výhled do zeleně.</p>
-        </div>
-        <div class="gallery-grid">
-          <figure class="gallery-feature"><img src="assets/100555486.webp" alt="Fasáda rezidenčního domu v ulici tř. Spojenců" loading="lazy" /></figure>
-          <figure><img src="assets/100554631.webp" alt="Vstupní hala se secesní dlažbou" loading="lazy" /></figure>
-          <figure><img src="assets/100554635.webp" alt="Obytný prostor s vysokými okny" loading="lazy" /></figure>
-          <figure><img src="assets/100554648.webp" alt="Schodiště domu s kovovým zábradlím" loading="lazy" /></figure>
-          <figure><img src="assets/100554639.webp" alt="Výhled z vysokých oken do zeleně" loading="lazy" /></figure>
+          <figure class="attic-media"><img src="assets/100554650.webp" alt="Původní dřevěný krov v půdním prostoru domu" loading="lazy" /></figure>
         </div>
       </section>
 
-      <section class="location-section" id="lokalita" aria-labelledby="location-heading">
-        <div class="location-visual">
-          <img src="assets/100555300.webp" alt="Rezidence Spojenců 705 v kontextu městské ulice" loading="lazy" />
-        </div>
-        <div class="location-copy">
-          <p class="eyebrow">LOKALITA</p>
-          <h2 id="location-heading">Mezi parkem a historickým centrem.</h2>
-          <p>
-            Třída Spojenců je součástí zeleného okruhu kolem olomouckého centra. Hned za domem začínají Čechovy sady, Horní i Dolní náměstí jsou dostupné pěšky a tramvaj je v sousední ulici Palackého.
-          </p>
-          <ul class="location-list">
-            <li><span>01</span>Čechovy sady za domem</li>
-            <li><span>02</span>historické centrum pěšky</li>
-            <li><span>03</span>tramvaj v ulici Palackého</li>
-          </ul>
-          <a class="text-link" href="https://maps.google.com/?q=t%C5%99.%20Spojenc%C5%AF%20705%2F4%2C%20Olomouc" target="_blank" rel="noreferrer">Otevřít mapu <span aria-hidden="true">↗</span></a>
+      <section class="visuals" id="galerie" aria-labelledby="visuals-heading">
+        <div class="page-shell">
+          <header class="visuals-intro">
+            <div>
+              <p class="section-kicker">Vybrané pohledy</p>
+              <h2 id="visuals-heading">Dům v detailu.</h2>
+            </div>
+            <p>Vybrané pohledy na společné prostory, interiéry a architekturu domu.</p>
+          </header>
+
+          <div class="gallery-carousel" aria-label="Galerie domu">
+            <div class="gallery-toolbar">
+              <p class="gallery-progress" aria-hidden="true"><span id="gallery-current">01</span><span>/</span><span>05</span></p>
+              <div class="gallery-controls" aria-label="Ovládání galerie">
+                <button class="gallery-control" type="button" data-gallery-previous aria-controls="gallery-deck" aria-label="Předchozí pohled"><span aria-hidden="true">←</span></button>
+                <button class="gallery-control" type="button" data-gallery-next aria-controls="gallery-deck" aria-label="Další pohled"><span aria-hidden="true">→</span></button>
+              </div>
+            </div>
+            <div class="gallery-deck" id="gallery-deck" role="group" aria-label="Vybrané pohledy na dům"></div>
+            <p class="sr-only" id="gallery-caption" aria-live="polite">Schodiště s původním kovovým zábradlím.</p>
+          </div>
         </div>
       </section>
 
-      <section class="contact-section page-width" id="kontakt" aria-labelledby="contact-heading">
-        <div>
-          <p class="eyebrow eyebrow-dark">PROHLÍDKY A REZERVACE</p>
-          <h2 id="contact-heading">Máte vybraný byt?</h2>
-        </div>
-        <div class="contact-actions">
-          <a class="contact-phone" href="tel:+420775448890">+420 775 448 890</a>
-          <p>Marson Invest · prodej jednotek ve stávajícím stavu</p>
-          <a class="button button-dark" href="tel:+420775448890">Zavolat a domluvit termín</a>
+      <section class="location" id="lokalita" aria-labelledby="location-heading">
+        <div class="page-shell location-grid">
+          <figure class="location-media"><img src="assets/100555300.webp" alt="Pohled na rezidenční dům v ulici tř. Spojenců" loading="lazy" /></figure>
+          <div class="location-copy">
+            <p class="section-kicker">Olomouc</p>
+            <h2 id="location-heading">Mezi parkem a historickým centrem.</h2>
+            <p>
+              Třída Spojenců je součástí zeleného okruhu kolem centra Olomouce. Za domem leží Čechovy sady, tramvaj je v sousední ulici Palackého.
+            </p>
+            <a class="text-button" href="https://maps.google.com/?q=t%C5%99.%20Spojenc%C5%AF%20705%2F4%2C%20Olomouc" target="_blank" rel="noreferrer">Otevřít mapu <span aria-hidden="true">↗</span></a>
+          </div>
         </div>
       </section>
+
     </main>
 
-    <footer class="site-footer">
-      <div class="page-width footer-inner">
-        <div class="footer-brand">
-          <img src="assets/marson-invest-logo.png" alt="Marson Invest" width="66" height="89" />
-          <div><strong>MARSON INVEST</strong><span>Rezidence Spojenců 705 · Olomouc</span></div>
+    <div class="closing-sequence">
+      <section class="contact" id="kontakt" aria-labelledby="contact-heading">
+        <div class="page-shell contact-shell">
+          <div class="contact-cta">
+            <p class="section-kicker">Prohlídky a rezervace</p>
+            <h2 id="contact-heading">Domluvte si prohlídku.</h2>
+            <p>Vyberte si byt, který vás zaujal. Společně projdeme jeho stav, možnosti a dostupné termíny prohlídky.</p>
+            <div class="contact-actions">
+              <a class="contact-phone" href="tel:+420775448890">+420 775 448 890</a>
+              <a class="button button-primary" href="tel:+420775448890"><span class="button-label">Domluvit prohlídku</span><span aria-hidden="true">→</span></a>
+            </div>
+          </div>
         </div>
-        <p>Uvedené výměry a nabídkové ceny jsou informativní a mohou se změnit.</p>
-        <a href="#top">Nahoru ↑</a>
-      </div>
-    </footer>
+      </section>
 
-    <dialog class="unit-dialog" id="unit-dialog" aria-labelledby="dialog-title">
-      <button class="dialog-close" type="button" aria-label="Zavřít detail">×</button>
-      <div class="dialog-layout">
-        <img id="dialog-image" src="" alt="" />
-        <div class="dialog-content">
-          <p class="eyebrow eyebrow-dark" id="dialog-floor"></p>
-          <h2 id="dialog-title" tabindex="-1"></h2>
-          <p id="dialog-description"></p>
-          <dl class="dialog-facts">
-            <div><dt>Výměra</dt><dd id="dialog-area"></dd></div>
-            <div><dt>Nabídková cena</dt><dd id="dialog-price"></dd></div>
+      <footer class="site-footer">
+        <video
+          class="footer-film"
+          src="https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260418_115655_b4d9cd77-feed-43cd-a198-af78ebdf1f7a.mp4"
+          autoplay
+          muted
+          loop
+          playsinline
+          preload="metadata"
+          aria-hidden="true"
+          tabindex="-1"
+        ></video>
+        <div class="page-shell footer-shell">
+          <a class="footer-brand" href="#top" aria-label="Nahoru, Marson Invest">
+            <img src="assets/marson-invest-mark.png" width="42" height="52" alt="" />
+            <span class="footer-brand-name">Marson <b>Invest</b></span>
+          </a>
+          <p>Rezidence Spojenců 705, Olomouc. Uvedené výměry a nabídkové ceny jsou informativní a mohou se změnit.</p>
+          <a class="footer-top" href="#top">Nahoru <span aria-hidden="true">↑</span></a>
+        </div>
+      </footer>
+    </div>
+
+    <dialog class="unit-sheet" id="unit-sheet" aria-labelledby="sheet-title">
+      <button class="sheet-close" type="button" aria-label="Zavřít detail jednotky">×</button>
+      <div class="sheet-layout">
+        <figure class="sheet-media"><img id="sheet-image" src="" alt="" /></figure>
+        <div class="sheet-content">
+          <p class="sheet-floor" id="sheet-floor"></p>
+          <h2 id="sheet-title" tabindex="-1"></h2>
+          <p id="sheet-description"></p>
+          <dl class="sheet-facts">
+            <div><dt>Výměra</dt><dd id="sheet-area"></dd></div>
+            <div><dt>Nabídková cena</dt><dd id="sheet-price"></dd></div>
           </dl>
-          <a class="button button-dark" href="tel:+420775448890">Chci prohlídku</a>
+          <p class="sheet-note">Jednotka se prodává ve stávajícím stavu.</p>
+          <a class="button button-primary" href="tel:+420775448890">Domluvit prohlídku <span aria-hidden="true">→</span></a>
         </div>
       </div>
     </dialog>
 
-    <script src="app.js"></script>
+    <script defer src="app.js?v=20260820-22"></script>
   </body>
 </html>
